@@ -1,6 +1,8 @@
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 
 public class Java_Day1 {
@@ -23,6 +25,5 @@ public class Java_Day1 {
 		Log.logInfo("ä¯ÀÀÆ÷ÒÑ¾­ÍË³ö");
 	}
 
-	
-	
+
 }
