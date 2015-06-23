@@ -1,0 +1,8 @@
+<suite name="testNGSuite" >
+    <test name="TestNGTest" >
+       <classes>
+           <calss name="study.testNG.TestNGDay1"/>
+           <calss name="study.testNG.TestNGDay2"/>
+       </classes>
+    </test>
+    </suite>   
