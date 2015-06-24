@@ -1,0 +1,17 @@
+<suite name="testNGSuite" >
+    <test name="TestNGTest" > 
+    <groups>
+      <run>
+      
+      <include name="test1" />
+      <include name="test2" />
+      
+      </run>
+    
+    </groups>
+    <classes>
+           <class name="study.testNG.TestNGDay1" />
+           <class name="study.testNG.TestNGDay2" />
+       </classes>
+    </test>
+    </suite>  

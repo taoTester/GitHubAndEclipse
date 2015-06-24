@@ -62,7 +62,33 @@ public class TestNGDay1 {
 		
 	}
 	
-	@AfterSuite
+	@Test(groups={"test1"})
+	public void group1Test1(){
+		
+		System.out.println("this is group1 test1");
+		
+	}
+	
+	@Test(groups={"test1"})
+	public void group1Test2(){
+		
+		System.out.println("this is group2 test1");
+		
+	}
+	
+	@Test(groups={"test2"})
+	public void group2Test1(){
+		
+		System.out.println("this is group1 test2");
+	}
+	
+	@Test(groups={"test1","test2"})
+	public void mixGroupTest(){
+		
+		System.out.println("This is mix group test");
+		
+	}
+	
 	public void afterSuite(){
 		
 		System.out.println("this is after Suite Test");
