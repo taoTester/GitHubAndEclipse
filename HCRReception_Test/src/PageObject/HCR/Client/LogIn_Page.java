@@ -8,21 +8,20 @@ import org.openqa.selenium.WebElement;
 
 
 
-public class LogInPage {
+public class LogIn_Page extends BaseClass{
+	
+	public LogIn_Page(WebDriver driver){
+		
+		super(driver);
+		
+	}
+
+	public static WebElement element = null;
 	
 	
-//	public static WebDriver driver; 
-	
-//	public static void testPage(){
-//		
-//	    driver = new FirefoxDriver();
-//		
-//		driver.get("http://172.16.7.46:7106/etmallWeb/login/login.xhtml");
-//		
-//	}
 
 //转换到企业登陆的界面
-	public static WebElement enterpriseLogin(WebDriver driver){
+	public static WebElement enterpriseLogin(){
 		
 	
 		return	driver.findElement(By.xpath("//div[@class='loginTab']/ul/li[@class='current']"));

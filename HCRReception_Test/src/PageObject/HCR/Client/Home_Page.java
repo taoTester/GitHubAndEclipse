@@ -1,5 +1,5 @@
 package PageObject.HCR.Client;
 
-public class HomePage {
+public class Home_Page {
 
 }

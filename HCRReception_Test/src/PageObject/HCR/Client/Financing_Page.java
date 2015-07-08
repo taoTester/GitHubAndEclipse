@@ -1,5 +1,5 @@
 package PageObject.HCR.Client;
 
-public class ForgetPasswordPage {
+public class Financing_Page {
 
 }
