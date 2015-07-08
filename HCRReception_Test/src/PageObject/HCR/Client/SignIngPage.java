@@ -1,4 +1,4 @@
-package Web.HCR.Test;
+package PageObject.HCR.Client;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

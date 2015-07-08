@@ -1,4 +1,4 @@
-package Web.HCR.Test;
+package PageObject.HCR.Client;
 
 public class HomePage {
 
