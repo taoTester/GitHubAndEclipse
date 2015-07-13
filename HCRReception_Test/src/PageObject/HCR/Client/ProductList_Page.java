@@ -2,7 +2,8 @@ package PageObject.HCR.Client;
 
 import java.util.List;
 
-import org.apache.commons.collections.map.StaticBucketMap;
+
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,6 +38,7 @@ public class ProductList_Page extends BaseClass {
 	
 	public static class search_Page{
 		
+		@SuppressWarnings("unused")
 		public static WebElement MoneyLimit(){
 			
 			List<WebElement> elements = driver.findElements(By.xpath(".//*[@id='J_cateAttrBox']/dl[1]/dd/a"));

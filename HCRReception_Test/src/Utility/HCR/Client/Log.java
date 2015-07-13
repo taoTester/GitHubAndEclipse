@@ -1,24 +1,8 @@
 package Utility.HCR.Client;
-import java.io.File;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 
 public class Log {
-
-	
-	private static Logger logger;
-
-    private static String filePath = "config/log4j.properties";
-
-    private static boolean flag = false;
-
-    private static synchronized void getPropertyFile() {
-        logger = Logger.getLogger("TestProject");
-        PropertyConfigurator.configure(new File(filePath).getAbsolutePath());
-        flag = true;
-    }
 
 
     // Initialize Log4j logs
