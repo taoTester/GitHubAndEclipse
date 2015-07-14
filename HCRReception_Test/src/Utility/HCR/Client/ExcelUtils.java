@@ -136,7 +136,7 @@ public class ExcelUtils {
 		} catch (Exception e) {
 
 			
-            Log.error("ExcelUtils-getConstantNum-失败获取一个TestCase的步骤数量"+e.getMessage());
+            Log.error("ExcelUtils-getConstantNum-失败获取一个TestCase的步骤数量: "+e.getMessage());
 			throw(e);
 		}	
 		

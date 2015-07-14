@@ -4,7 +4,7 @@ public class Constant {
 
 	public static final  String BASE_URL="http://172.16.7.46:7106/etmallWeb/index/index.xhtml";
 	
-	public static final String EXCELFILE_PATH="E:\\JavaCodeWorkSpace\\HCRReception_Test\\src\\testdata\\TestData.xlsx";
+	public static final String EXCELFILE_PATH="E:\\JavaCodeWorkSpace\\HCRReception_Test\\src\\testdata\\HCRTestData.xlsx";
 	public static final String EXCELSHEET_NAME="testdata1";
 	
 	public static final int EXCEl_TESTCASENAME=0;

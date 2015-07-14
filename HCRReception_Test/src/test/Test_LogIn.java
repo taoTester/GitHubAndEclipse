@@ -1,7 +1,9 @@
 package test;
 
-import org.apache.log4j.xml.DOMConfigurator;
+
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -12,38 +14,55 @@ import PageObject.HCR.Client.BaseClass;
 import Utility.HCR.Client.Constant;
 import Utility.HCR.Client.ExcelUtils;
 import Utility.HCR.Client.Log;
-import Utility.HCR.Client.TestNGListeners;
 import Utility.HCR.Client.Utils;
 
 @Listeners(Utility.HCR.Client.TestNGListener.class)
-public class Test_LogIn extends TestNGListeners{
+public class Test_LogIn {
 
-	private static String testCaseName;
-	private static WebDriver driver;
+	public WebDriver driver;
+	public boolean flag;
+	private String testCaseName;
+	private int iTestCaseRow;
 	
 	@BeforeMethod
 	public void setUp() throws Exception{
 		
-		DOMConfigurator.configure("E:\\JavaCodeWorkSpace\\HCRReception_Test\\config\\log4j.properties");
+		PropertyConfigurator.configure("log4j.properties");
 		
-		testCaseName = this.toString();
 		testCaseName = Utils.getClassName(this.toString());
+		Log.info(testCaseName);
 		
 		Log.startTestCase(testCaseName);
 		
 		ExcelUtils.setExcelFile(Constant.EXCELFILE_PATH, Constant.EXCELSHEET_NAME);
 		
-		ExcelUtils.getConstantNum(testCaseName, Constant.EXCEl_TESTCASENAME);
+		iTestCaseRow=ExcelUtils.getConstantNum(testCaseName, Constant.EXCEl_TESTCASENAME);
 		
-		Utils.openBrowser(1);
-		
+		driver = Utils.openBrowser(iTestCaseRow);
+
 		new  BaseClass(driver);
 	}
 	
 	@Test
-	public void test_LogIn(){
+	public void test_LogIn() throws Exception{
 		
-		LogIn_Actions.execute(1);
+		
+	try {
+		
+		LogIn_Actions.execute(iTestCaseRow);
+		
+		
+	//	Assert.assertEquals("actual", "expected");
+		
+		
+	} catch (Exception e) {
+		
+		Utils.takeScreenShot(driver, testCaseName);
+		ExcelUtils.setCellData("Failed", iTestCaseRow, Constant.EXCEL_RESULT);
+		Log.error(testCaseName +"is failed"+e.getMessage());
+		throw(e);
+	}
+		
 		
 	}
 
